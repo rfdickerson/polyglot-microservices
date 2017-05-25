@@ -10,11 +10,10 @@ let envVars = ProcessInfo.processInfo.environment
 
 let router = Router()
 
-router.get("/app") {
-    request, response, next in
-    let fruits = ["apple", "orange", "lime"]
-    response.send(json: JSON(fruits))
-    next()
+router.get("/hello") {
+  request, response, next in
+  response.send("Hello World!")
+  next()
 }
 
 if envVars["ENV"] != "PRODUCTION" {

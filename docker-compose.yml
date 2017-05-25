@@ -2,7 +2,7 @@ version: '2'
 services:
   swift-microservice:
     build: swift-microservice
-    command: node_modules/.bin/gulp develop
+    command: npm run start-dev
     volumes:
       - ./swift-microservice:/usr/app
       - /usr/app/node_modules

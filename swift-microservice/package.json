@@ -4,7 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "start-dev": "gulp watch"
+    "start-dev": "gulp develop"
   },
   "author": "",
   "license": "ISC",
