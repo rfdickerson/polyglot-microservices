@@ -8,6 +8,8 @@ services:
       - /usr/app/node_modules
     ports:
       - "3100:8090"
+    links:
+      - mongo
   node-microservice:
     build: node-microservice
     command: npm run start-dev
@@ -16,8 +18,11 @@ services:
       - /usr/app/node_modules
     ports:
       - "3000:3000"
-  # mongo:
-  #   image: mongo
+    links:
+      - mongo
+  mongo:
+    image: mongo:latest
+
   # redis:
   #   image: redis
   # zipkin:
