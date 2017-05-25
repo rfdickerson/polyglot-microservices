@@ -7,11 +7,18 @@ services:
       - ./swift-microservice:/usr/app
       - /usr/app/node_modules
     ports:
-      - "8090:8090"
-  # node-microservice:
-  #   build: node-microservice
-  #   command: npm start-dev
-  #   ports:
-  #     - "3000:3000"
+      - "3100:8090"
+  node-microservice:
+    build: node-microservice
+    command: npm run start-dev
+    volumes:
+      - ./node-microservice:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "3000:3000"
   # mongo:
   #   image: mongo
+  # redis:
+  #   image: redis
+  # zipkin:
+  #   image: openzipkin/zipkin
