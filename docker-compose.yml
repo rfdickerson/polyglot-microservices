@@ -1,0 +1,17 @@
+version: '2'
+services:
+  swift-microservice:
+    build: swift-microservice
+    command: node_modules/.bin/gulp develop
+    volumes:
+      - ./swift-microservice:/usr/app
+      - /usr/app/node_modules
+    ports:
+      - "8090:8090"
+  # node-microservice:
+  #   build: node-microservice
+  #   command: npm start-dev
+  #   ports:
+  #     - "3000:3000"
+  # mongo:
+  #   image: mongo
