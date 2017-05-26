@@ -20,18 +20,7 @@ services:
       - "3000:3000"
     links:
       - mongo
-  # spring-microservice:
-  #   build: spring-microservice
-  #   command: java -jar target/gs-spring-boot-0.1.0.jar
-  #   volumes:
-  #     - ./spring-microservice:/usr/app
-  #   ports:
-  #     - "8080:8080"
-  #   links:
-  #     - mongo
   mongo:
     image: mongo:latest
   # redis:
   #   image: redis
-  # zipkin:
-  #   image: openzipkin/zipkin

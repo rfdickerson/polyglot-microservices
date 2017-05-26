@@ -1,0 +1,8 @@
+version: '2'
+services:
+  zipkin:
+    image: openzipkin/zipkin
+  nginx:
+    build: nginx
+    ports:
+      - "80:80"
