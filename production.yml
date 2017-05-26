@@ -1,5 +1,13 @@
 version: '2'
 services:
+  swift-microservice:
+    command: npm run start
+  node-microservice:
+    command: npm run start
+    environment:
+      NODE_ENV: "development"
+
+services:
   zipkin:
     image: openzipkin/zipkin
   nginx:
