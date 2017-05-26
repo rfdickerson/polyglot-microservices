@@ -1,5 +1,8 @@
 version: '2'
 services:
+  swift-microservice:
+    command: npm run start
+services:
   zipkin:
     image: openzipkin/zipkin
   nginx:

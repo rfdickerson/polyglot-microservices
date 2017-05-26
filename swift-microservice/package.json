@@ -4,6 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
+    "start": "swift build --configuration=release && .build/release/Server",
     "start-dev": "gulp develop"
   },
   "author": "",
