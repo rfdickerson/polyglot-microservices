@@ -18,6 +18,8 @@ services:
       - /usr/app/node_modules
     ports:
       - "3000:3000"
+    environment:
+      NODE_ENV: "development"
     links:
       - mongo
   python-microservice:
@@ -27,6 +29,8 @@ services:
       - ./python-microservice:/usr/app
     ports:
       - "3200:5000"
+    environment:
+      PYTHON_ENV: "development"
     links:
       - mongo
   mongo:

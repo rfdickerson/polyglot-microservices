@@ -2,11 +2,16 @@ version: '2'
 services:
   swift-microservice:
     command: npm run start
+    environment:
+      NODE_ENV: "production"
   node-microservice:
     command: npm run start
     environment:
-      NODE_ENV: "development"
-
+      NODE_ENV: "production"
+  python-microservice:
+    environment:
+      PYTHON_ENV: "production"
+  
 services:
   zipkin:
     image: openzipkin/zipkin
