@@ -8,9 +8,9 @@ To run a development environment, simply run:
 docker-compose up
 ```
 
-- The ExpressJS Node server is running at :3000
-- The Kitura Swift server is running at :3100
-- Java server to come.
+- The ExpressJS Node server is running at localhost:3000
+- The Kitura Swift server is running at localhost:3100
+- The Flask Python server is running at localhost:3200
 
 ## Production
 
