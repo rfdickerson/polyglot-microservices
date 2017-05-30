@@ -20,7 +20,12 @@ services:
       - "3000:3000"
     links:
       - mongo
+  python-microservice:
+    build: python-microservice
+    command: python app.py
+    ports:
+      - "3200:5000"
+    links:
+      - mongo
   mongo:
     image: mongo:latest
-  # redis:
-  #   image: redis
