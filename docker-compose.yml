@@ -23,6 +23,8 @@ services:
   python-microservice:
     build: python-microservice
     command: python app.py
+    volumes:
+      - ./python-microservice:/usr/app
     ports:
       - "3200:5000"
     links:

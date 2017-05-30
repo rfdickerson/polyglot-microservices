@@ -1,4 +1,7 @@
 FROM python:2-alpine
-COPY . /app
-WORKDIR /app
-RUN pip install -r requirements.txt
+
+COPY requirements.txt /tmp/requirements.txt
+RUN cd /tmp && pip install -r requirements.txt
+
+WORKDIR /usr/app
+
