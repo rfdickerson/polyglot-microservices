@@ -10,9 +10,9 @@ let envVars = ProcessInfo.processInfo.environment
 
 let router = Router()
 
-router.get("/hello") {
+router.get("/") {
   request, response, next in
-  response.send("Hello World, Robert!")
+  response.send("Hello World, I am Swift!")
   next()
 }
 

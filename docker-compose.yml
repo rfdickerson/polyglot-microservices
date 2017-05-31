@@ -33,5 +33,7 @@ services:
       PYTHON_ENV: "development"
     links:
       - mongo
+      - node-microservice
+      - swift-microservice
   mongo:
     image: mongo:latest

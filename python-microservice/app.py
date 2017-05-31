@@ -1,4 +1,6 @@
 import os
+import requests
+
 from flask import Flask
 app = Flask(__name__)
 
@@ -10,7 +12,17 @@ except KeyError:
 
 @app.route("/")
 def hello():
-    return "Hello,  World!"
+    return "Hello  World!"
+
+@app.route("/call/node")
+def call_node():
+    r = requests.get('http://node-microservice:3000/')
+    return r.text
+
+@app.route("/call/swift")
+def call_swift():
+    r = requests.get("http://swift-microservice:8090/")
+    return r.text
 
 if __name__ == "__main__":
     app.run(debug=developMode,host='0.0.0.0')
