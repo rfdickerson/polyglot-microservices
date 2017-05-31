@@ -12,7 +12,7 @@ except KeyError:
 
 @app.route("/")
 def hello():
-    return "Hello  World!"
+    return "Hello  World from Python!"
 
 @app.route("/call/node")
 def call_node():
