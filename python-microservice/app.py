@@ -17,12 +17,12 @@ def hello():
 @app.route("/call/node")
 def call_node():
     r = requests.get('http://node-microservice:3000/')
-    return r.text
+    return "Python service received: \"{0}\"".format( r.text)
 
 @app.route("/call/swift")
 def call_swift():
     r = requests.get("http://swift-microservice:8090/")
-    return r.text
+    return "Python service received: \"{0}\"".format( r.text)
 
 if __name__ == "__main__":
     app.run(debug=developMode,host='0.0.0.0')
