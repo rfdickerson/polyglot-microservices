@@ -35,5 +35,19 @@ services:
       - mongo
       - node-microservice
       - swift-microservice
+  node-web:
+    build: node-web/.
+    command: yarn start-dev
+    volumes:
+      - ./node-web:/usr/app/
+      - /usr/app/node_modules
+    ports:
+      - "3300:3000"
+    links:
+      - mongo
+    environment:
+      MONGO_URL: "mongo/comments"
+      PORT: "8000"
+      NODE_ENV: "development"
   mongo:
     image: mongo:latest
